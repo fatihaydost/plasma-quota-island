@@ -13,7 +13,7 @@
 <div align="center">
 
 [![Release](https://img.shields.io/github/v/release/fatihaydost/plasma-quota-island?label=release&color=1c74c2)](https://github.com/fatihaydost/plasma-quota-island/releases/latest)
-[![KDE Store](https://img.shields.io/badge/KDE%20Store-get%20it-1d99f3?logo=kde&logoColor=white)](https://store.kde.org/p/STORE_ID/)
+[![KDE Store](https://img.shields.io/badge/KDE%20Store-get%20it-1d99f3?logo=kde&logoColor=white)](https://store.kde.org/p/2382079/)
 [![Plasma 6](https://img.shields.io/badge/Plasma-6-1d99f3?logo=kdeplasma&logoColor=white)](https://kde.org/plasma-desktop/)
 [![License](https://img.shields.io/github/license/fatihaydost/plasma-quota-island?color=4c1)](LICENSE)
 
