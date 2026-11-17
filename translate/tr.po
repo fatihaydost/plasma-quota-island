@@ -1,0 +1,837 @@
+# Turkish translation for Quota Island (io.github.fatihaydost.island).
+# This file is distributed under the same license as the package (GPL-3.0-or-later).
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_io.github.fatihaydost.island\n"
+"Report-Msgid-Bugs-To: https://github.com/fatihaydost/plasma-quota-island/"
+"issues\n"
+"POT-Creation-Date: 2026-11-17 19:47+0300\n"
+"Last-Translator: Fatih Aydost\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/config/config.qml:7
+msgid "General"
+msgstr "Genel"
+
+#: package/contents/config/config.qml:12
+msgid "Diagnostics"
+msgstr "Teşhis"
+
+#: package/contents/ui/AudioSection.qml:209
+#: package/contents/ui/ConfigDiagnostics.qml:74
+msgid "Audio"
+msgstr "Ses"
+
+#: package/contents/ui/AudioSection.qml:230
+msgid "Unmute"
+msgstr "Sesi aç"
+
+#: package/contents/ui/AudioSection.qml:230
+msgid "Mute"
+msgstr "Sessize al"
+
+#: package/contents/ui/AudioSection.qml:285
+msgid "Unmute microphone"
+msgstr "Mikrofonu aç"
+
+#: package/contents/ui/AudioSection.qml:285
+msgid "Mute microphone"
+msgstr "Mikrofonu kapat"
+
+#: package/contents/ui/AudioSection.qml:328
+msgid "Master volume %1 percent"
+msgstr "Ana ses düzeyi yüzde %1"
+
+#: package/contents/ui/AudioSection.qml:480
+msgid "Output %1"
+msgstr "Çıkış %1"
+
+#: package/contents/ui/AudioSection.qml:585
+msgid "Application %1"
+msgstr "Uygulama %1"
+
+#: package/contents/ui/AudioSection.qml:691
+msgid "Unmute %1"
+msgstr "%1 sesini aç"
+
+#: package/contents/ui/AudioSection.qml:691
+msgid "Mute %1"
+msgstr "%1 sessize al"
+
+#: package/contents/ui/AudioSection.qml:735
+msgid "%1 volume"
+msgstr "%1 ses düzeyi"
+
+#: package/contents/ui/Backend.qml:112
+msgid "Login expired"
+msgstr "Oturum süresi doldu"
+
+#: package/contents/ui/Backend.qml:112
+msgid "Rate limited"
+msgstr "İstek sınırına takıldı"
+
+#: package/contents/ui/Backend.qml:113 package/contents/ui/DashClock.qml:50
+msgid "Offline"
+msgstr "Çevrimdışı"
+
+#: package/contents/ui/Backend.qml:113
+msgid "Unavailable"
+msgstr "Kullanılamıyor"
+
+#: package/contents/ui/Backend.qml:120
+msgid "cached · %1 min ago"
+msgid_plural "cached · %1 min ago"
+msgstr[0] "önbellek · %1 dk önce"
+
+#: package/contents/ui/CompactIsland.qml:84
+msgid "Media"
+msgstr "Medya"
+
+#: package/contents/ui/CompactIsland.qml:277
+#: package/contents/ui/CompactIsland.qml:292
+msgid "Muted"
+msgstr "Sessiz"
+
+#: package/contents/ui/CompactIsland.qml:277
+#: package/contents/ui/CompactIsland.qml:294
+msgid "Volume"
+msgstr "Ses"
+
+#: package/contents/ui/CompactIsland.qml:321
+msgid "1 agent awaiting approval"
+msgid_plural "%1 agents awaiting approval"
+msgstr[0] "%1 ajan onay bekliyor"
+
+#: package/contents/ui/CompactIsland.qml:391
+msgid "Quota Island notification: %1"
+msgstr "Quota Island bildirimi: %1"
+
+#: package/contents/ui/CompactIsland.qml:393
+msgid "Quota Island: %1 · %2"
+msgstr "Quota Island: %1 · %2"
+
+#: package/contents/ui/CompactIsland.qml:394
+msgid "Quota Island: %1 %2"
+msgstr "Quota Island: %1 %2"
+
+#: package/contents/ui/CompactIsland.qml:493
+#: package/contents/ui/ShelfSection.qml:95
+msgid "Added to shelf"
+msgid_plural "%1 items added to shelf"
+msgstr[0] "%1 öğe rafa eklendi"
+
+#: package/contents/ui/CompactIsland.qml:626
+#: package/contents/ui/DashMedia.qml:452
+#: package/contents/ui/MediaSection.qml:619
+msgid "Previous track"
+msgstr "Önceki parça"
+
+#: package/contents/ui/CompactIsland.qml:677
+#: package/contents/ui/DashMedia.qml:204 package/contents/ui/DashMedia.qml:491
+#: package/contents/ui/MediaSection.qml:375
+#: package/contents/ui/MediaSection.qml:655
+msgid "Pause"
+msgstr "Duraklat"
+
+#: package/contents/ui/CompactIsland.qml:677
+#: package/contents/ui/DashMedia.qml:204 package/contents/ui/DashMedia.qml:491
+#: package/contents/ui/MediaSection.qml:375
+#: package/contents/ui/MediaSection.qml:655
+msgid "Play"
+msgstr "Oynat"
+
+#: package/contents/ui/CompactIsland.qml:728
+#: package/contents/ui/DashMedia.qml:528
+#: package/contents/ui/MediaSection.qml:691
+msgid "Next track"
+msgstr "Sonraki parça"
+
+#: package/contents/ui/CompactIsland.qml:825
+msgid "Microphone in use by %1"
+msgstr "Mikrofonu kullanan: %1"
+
+#: package/contents/ui/CompactIsland.qml:854
+#: package/contents/ui/CompactIsland.qml:887
+#: package/contents/ui/CompactIsland.qml:920
+msgid "%1 quota: %2"
+msgstr "%1 kotası: %2"
+
+#: package/contents/ui/CompactIsland.qml:1064
+msgid "Drop on shelf"
+msgstr "Rafa bırak"
+
+#: package/contents/ui/ConfigDiagnostics.qml:53
+msgid "%1: found"
+msgstr "%1: bulundu"
+
+#: package/contents/ui/ConfigDiagnostics.qml:53
+msgid "%1: not found"
+msgstr "%1: bulunamadı"
+
+#: package/contents/ui/ConfigDiagnostics.qml:63
+msgid "Checking…"
+msgstr "Denetleniyor…"
+
+#: package/contents/ui/ConfigDiagnostics.qml:63
+msgid "Found"
+msgstr "Bulundu"
+
+#: package/contents/ui/ConfigDiagnostics.qml:63
+msgid "Not found"
+msgstr "Bulunamadı"
+
+#: package/contents/ui/ConfigDiagnostics.qml:81
+msgid "System"
+msgstr "Sistem"
+
+#: package/contents/ui/ConfigDiagnostics.qml:90
+msgid "Optional integrations"
+msgstr "İsteğe bağlı entegrasyonlar"
+
+#: package/contents/ui/ConfigDiagnostics.qml:94
+msgid "Houra database"
+msgstr "Houra veritabanı"
+
+#: package/contents/ui/ConfigDiagnostics.qml:98
+msgid "Quota credentials"
+msgstr "Kota kimlik bilgileri"
+
+#: package/contents/ui/ConfigDiagnostics.qml:106
+msgid "Check again"
+msgstr "Yeniden denetle"
+
+#: package/contents/ui/ConfigDiagnostics.qml:114
+msgid ""
+"Only presence is checked. No paths, tokens or credential contents are read "
+"into this page."
+msgstr ""
+"Yalnız var olup olmadıkları denetlenir. Bu sayfaya yol, belirteç ya da "
+"kimlik içeriği gelmez."
+
+#: package/contents/ui/ConfigGeneral.qml:84
+msgid "Color theme:"
+msgstr "Renk teması:"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+msgid "System color scheme (KDE)"
+msgstr "Sistem renk şeması (KDE)"
+
+#: package/contents/ui/ConfigGeneral.qml:104
+msgid "Custom accent color:"
+msgstr "Özel vurgu rengi:"
+
+#: package/contents/ui/ConfigGeneral.qml:109
+msgid "#rrggbb (empty = theme accent)"
+msgstr "#rrggbb (boş = temanın vurgusu)"
+
+#: package/contents/ui/ConfigGeneral.qml:129
+msgid "Reset"
+msgstr "Sıfırla"
+
+#: package/contents/ui/ConfigGeneral.qml:143
+msgid "Max. track title width (px):"
+msgstr "Maks. şarkı adı genişliği (px):"
+
+#: package/contents/ui/ConfigGeneral.qml:151
+msgid "Wheel volume step (%):"
+msgstr "Tekerlek ses adımı (%):"
+
+#: package/contents/ui/ConfigGeneral.qml:159
+msgid "Panel badges:"
+msgstr "Panel rozetleri:"
+
+#: package/contents/ui/ConfigGeneral.qml:160
+msgid "Show volume percentage badge"
+msgstr "Ses yüzdesi rozetini göster"
+
+#: package/contents/ui/ConfigGeneral.qml:165
+msgid "Show quota rings"
+msgstr "Kota halkalarını göster"
+
+#: package/contents/ui/ConfigGeneral.qml:170
+msgid "Quota providers:"
+msgstr "Kota sağlayıcıları:"
+
+#: package/contents/ui/ConfigGeneral.qml:185
+msgid "A provider without credentials is hidden even when enabled."
+msgstr "Kimlik bilgisi bulunmayan sağlayıcı açık olsa da gösterilmez."
+
+#: package/contents/ui/ConfigGeneral.qml:198
+msgid "Idle quota badge:"
+msgstr "Boştayken kota rozeti:"
+
+#: package/contents/ui/ConfigGeneral.qml:199
+msgid "Hourly and weekly together (5h·7d)"
+msgstr "Saatlik ve haftalık birlikte (5sa·7g)"
+
+#: package/contents/ui/ConfigGeneral.qml:210
+msgid "Hourly window only (5h)"
+msgstr "Yalnız saatlik pencere (5sa)"
+
+#: package/contents/ui/ConfigGeneral.qml:221
+msgid "Weekly window only (7d)"
+msgstr "Yalnız haftalık pencere (7g)"
+
+#: package/contents/ui/ConfigGeneral.qml:236
+msgid "Optional integrations:"
+msgstr "İsteğe bağlı entegrasyonlar:"
+
+#: package/contents/ui/ConfigGeneral.qml:237
+msgid "Herdr agents (if hc is installed)"
+msgstr "Herdr ajanları (hc kuruluysa)"
+
+#: package/contents/ui/ConfigGeneral.qml:242
+msgid "Houra focus summary (if the database exists)"
+msgstr "Houra odak özeti (veritabanı varsa)"
+
+#: package/contents/ui/ConfigGeneral.qml:251
+msgid "Weather:"
+msgstr "Hava durumu:"
+
+#: package/contents/ui/ConfigGeneral.qml:252
+msgid "Off (no network requests)"
+msgstr "Kapalı (ağ isteği yok)"
+
+#: package/contents/ui/ConfigGeneral.qml:262
+msgid "Manual location (Open-Meteo)"
+msgstr "Elle konum (Open-Meteo)"
+
+#: package/contents/ui/ConfigGeneral.qml:272
+msgid "Locate me by IP address (your IP is sent to ipwho.is)"
+msgstr "IP adresimden konum bul (IP adresi ipwho.is'e gönderilir)"
+
+#: package/contents/ui/ConfigGeneral.qml:282
+msgid "City:"
+msgstr "Şehir:"
+
+#: package/contents/ui/ConfigGeneral.qml:284
+msgid "e.g. Berlin"
+msgstr "örn. Ankara"
+
+#: package/contents/ui/ConfigGeneral.qml:289
+msgid "Coordinates (optional):"
+msgstr "Koordinat (isteğe bağlı):"
+
+#: package/contents/ui/ConfigGeneral.qml:295
+msgid "latitude"
+msgstr "enlem"
+
+#: package/contents/ui/ConfigGeneral.qml:302
+msgid "longitude"
+msgstr "boylam"
+
+#: package/contents/ui/ConfigGeneral.qml:310
+msgid ""
+"Tip: on the panel capsule, the mouse wheel changes the volume, middle click "
+"toggles mute, and left click opens the full Quota Island window."
+msgstr ""
+"İpucu: Panel kapsülü üzerinde fare tekerleği sesi değiştirir, orta tık sesi "
+"kapatıp açar, sol tık tam Quota Island penceresini açar."
+
+#: package/contents/ui/DashCalendar.qml:134
+msgid "Previous month"
+msgstr "Önceki ay"
+
+#: package/contents/ui/DashCalendar.qml:228
+msgid "Next month"
+msgstr "Sonraki ay"
+
+#: package/contents/ui/DashClock.qml:41
+msgctxt "weather"
+msgid "Clear"
+msgstr "Açık"
+
+#: package/contents/ui/DashClock.qml:42
+msgctxt "weather"
+msgid "Partly cloudy"
+msgstr "Parçalı bulutlu"
+
+#: package/contents/ui/DashClock.qml:43
+msgctxt "weather"
+msgid "Cloudy"
+msgstr "Bulutlu"
+
+#: package/contents/ui/DashClock.qml:44
+msgctxt "weather"
+msgid "Foggy"
+msgstr "Sisli"
+
+#: package/contents/ui/DashClock.qml:45
+msgctxt "weather"
+msgid "Drizzle"
+msgstr "Çisenti"
+
+#: package/contents/ui/DashClock.qml:46
+msgctxt "weather"
+msgid "Rainy"
+msgstr "Yağmurlu"
+
+#: package/contents/ui/DashClock.qml:47
+msgctxt "weather"
+msgid "Snowy"
+msgstr "Kar yağışlı"
+
+#: package/contents/ui/DashClock.qml:48
+msgctxt "weather"
+msgid "Stormy"
+msgstr "Fırtınalı"
+
+#: package/contents/ui/DashClock.qml:49
+msgid "Loading…"
+msgstr "Yükleniyor…"
+
+#: package/contents/ui/DashClock.qml:51
+msgid "Location not set"
+msgstr "Konum ayarlanmadı"
+
+#: package/contents/ui/DashClock.qml:61
+msgid "Today"
+msgstr "Bugün"
+
+#: package/contents/ui/DashClock.qml:177
+msgid "Weather"
+msgstr "Hava durumu"
+
+#: package/contents/ui/DashClock.qml:190
+#, javascript-format
+msgid "%1% humidity"
+msgstr "%%1 nem"
+
+#: package/contents/ui/DashClock.qml:191
+msgid "Click to refresh"
+msgstr "Yenilemek için tıkla"
+
+#: package/contents/ui/DashClock.qml:204
+msgid "Refresh weather"
+msgstr "Hava durumunu yenile"
+
+#: package/contents/ui/DashMedia.qml:237
+#: package/contents/ui/MediaSection.qml:166
+msgid "NOW PLAYING"
+msgstr "ŞİMDİ ÇALIYOR"
+
+#: package/contents/ui/DashMedia.qml:238
+#: package/contents/ui/MediaSection.qml:167
+msgid "PAUSED"
+msgstr "DURAKLATILDI"
+
+#: package/contents/ui/DashMedia.qml:238
+#: package/contents/ui/MediaSection.qml:167
+msgid "STANDBY"
+msgstr "BEKLEMEDE"
+
+#: package/contents/ui/DashMedia.qml:268
+#: package/contents/ui/MediaSection.qml:392
+msgid "Unknown track"
+msgstr "Bilinmeyen parça"
+
+#: package/contents/ui/DashMedia.qml:269
+msgid "No media playing"
+msgstr "Medya oynatılmıyor"
+
+#: package/contents/ui/DashMedia.qml:358
+#: package/contents/ui/MediaSection.qml:488
+msgid "Seek"
+msgstr "Konum"
+
+#: package/contents/ui/DashResources.qml:27
+msgid "Wired"
+msgstr "Kablolu"
+
+#: package/contents/ui/DashResources.qml:262 package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:75 package/contents/ui/main.qml:84
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: package/contents/ui/DashResources.qml:291
+msgid "Wired network"
+msgstr "Kablolu Ağ"
+
+#: package/contents/ui/DashResources.qml:291
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: package/contents/ui/DashResources.qml:293
+#, javascript-format
+msgid "%1% + LAN"
+msgstr "%%1 + LAN"
+
+#: package/contents/ui/DashResources.qml:293
+#, javascript-format
+msgid "%1% connected"
+msgstr "%%1 bağlı"
+
+#: package/contents/ui/DashResources.qml:294
+msgid "On"
+msgstr "Açık"
+
+#: package/contents/ui/DashResources.qml:294
+#: package/contents/ui/DashResources.qml:325
+msgid "Off"
+msgstr "Kapalı"
+
+#: package/contents/ui/DashResources.qml:308
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: package/contents/ui/DashResources.qml:310
+#, javascript-format
+msgid "%1% battery"
+msgstr "%%1 pil"
+
+#: package/contents/ui/DashResources.qml:310
+msgid "Connected"
+msgstr "Bağlı"
+
+#: package/contents/ui/DashResources.qml:311
+msgid "Ready"
+msgstr "Hazır"
+
+#: package/contents/ui/DashResources.qml:324
+msgid "Keep Awake"
+msgstr "Uyanık Tut"
+
+#: package/contents/ui/DashResources.qml:325
+msgid "On · Sleep blocked"
+msgstr "Açık · Uyku engelli"
+
+#: package/contents/ui/DashResources.qml:338
+msgid "Do Not Disturb"
+msgstr "Rahatsız Etme"
+
+#: package/contents/ui/DashResources.qml:339
+msgid "On · Silenced"
+msgstr "Açık · Sessiz"
+
+#: package/contents/ui/DashResources.qml:339
+msgid "Notifications on"
+msgstr "Bildirimler açık"
+
+#: package/contents/ui/DashResources.qml:397
+msgid "%1 approval"
+msgid_plural "%1 approvals"
+msgstr[0] "%1 onay"
+
+#: package/contents/ui/DashResources.qml:398
+msgid "%1 agent"
+msgid_plural "%1 agents"
+msgstr[0] "%1 ajan"
+
+#: package/contents/ui/DashResources.qml:459
+msgid "Open Live tab"
+msgstr "Canlı sekmesini aç"
+
+#: package/contents/ui/DashResources.qml:459
+msgid "%1 · %2"
+msgstr "%1 · %2"
+
+#: package/contents/ui/DashResources.qml:479
+msgctxt "@action:button suspend"
+msgid "Sleep"
+msgstr "Uyku"
+
+#: package/contents/ui/DashResources.qml:480
+msgctxt "@action:button"
+msgid "Lock"
+msgstr "Kilitle"
+
+#: package/contents/ui/DashResources.qml:481
+msgctxt "@action:button log out"
+msgid "Log Out"
+msgstr "Çıkış"
+
+#: package/contents/ui/DashResources.qml:482
+msgctxt "@action:button reboot"
+msgid "Restart"
+msgstr "Yeniden"
+
+#: package/contents/ui/DashResources.qml:483
+msgctxt "@action:button power off"
+msgid "Shut Down"
+msgstr "Kapat"
+
+#: package/contents/ui/DashResources.qml:550
+msgid "Confirm?"
+msgstr "Onayla?"
+
+#: package/contents/ui/DashResources.qml:564
+msgid "Confirm %1"
+msgstr "%1 onayla"
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Overview"
+msgstr "Panel"
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Media & Audio"
+msgstr "Medya & Ses"
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Quotas"
+msgstr "Kotalar"
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Live"
+msgstr "Canlı"
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Shelf"
+msgstr "Raf"
+
+#: package/contents/ui/FullIsland.qml:94
+#: package/contents/ui/LiveSection.qml:724
+msgid "Performance"
+msgstr "Performans"
+
+#: package/contents/ui/FullIsland.qml:97
+#: package/contents/ui/LiveSection.qml:726
+msgid "Power Saver"
+msgstr "Tasarruf"
+
+#: package/contents/ui/FullIsland.qml:99
+#: package/contents/ui/LiveSection.qml:725
+#: package/contents/ui/LiveSection.qml:743
+msgid "Balanced"
+msgstr "Dengeli"
+
+#: package/contents/ui/FullIsland.qml:486
+msgid "SYSTEM LOAD"
+msgstr "SİSTEM YÜKÜ"
+
+#: package/contents/ui/FullIsland.qml:600
+msgctxt "short for performance power profile"
+msgid "Perf"
+msgstr "Perf"
+
+#: package/contents/ui/FullIsland.qml:601
+msgctxt "short for balanced power profile"
+msgid "Bal"
+msgstr "Denge"
+
+#: package/contents/ui/FullIsland.qml:602
+msgctxt "short for power saver profile"
+msgid "Eco"
+msgstr "Eko"
+
+#: package/contents/ui/LiveSection.qml:167
+msgctxt "hours and minutes"
+msgid "%1h %2m"
+msgstr "%1sa %2dk"
+
+#: package/contents/ui/LiveSection.qml:167
+msgctxt "hours"
+msgid "%1 h"
+msgstr "%1 sa"
+
+#: package/contents/ui/LiveSection.qml:169
+msgctxt "minutes"
+msgid "%1 min"
+msgstr "%1 dk"
+
+#: package/contents/ui/LiveSection.qml:174
+msgctxt "agent status"
+msgid "blocked"
+msgstr "engelli"
+
+#: package/contents/ui/LiveSection.qml:177
+msgctxt "agent status"
+msgid "working"
+msgstr "çalışıyor"
+
+#: package/contents/ui/LiveSection.qml:179
+msgctxt "agent status"
+msgid "done"
+msgstr "bitti"
+
+#: package/contents/ui/LiveSection.qml:207
+msgid "On AC power"
+msgstr "Şebeke gücü"
+
+#: package/contents/ui/LiveSection.qml:210
+msgid "Charging"
+msgstr "Şarjda"
+
+#: package/contents/ui/LiveSection.qml:213
+msgid "Plugged in"
+msgstr "Fişte"
+
+#: package/contents/ui/LiveSection.qml:216
+msgid "Battery low"
+msgstr "Pil düşük"
+
+#: package/contents/ui/LiveSection.qml:218
+msgid "On battery"
+msgstr "Pilde"
+
+#: package/contents/ui/LiveSection.qml:295
+msgid "No live integrations found"
+msgstr "Canlı entegrasyon bulunamadı"
+
+#: package/contents/ui/LiveSection.qml:336
+msgctxt "agent count label"
+msgid "working"
+msgstr "çalışan"
+
+#: package/contents/ui/LiveSection.qml:361
+msgctxt "agent count label"
+msgid "blocked"
+msgstr "engelli"
+
+#: package/contents/ui/LiveSection.qml:382
+msgid "No active agents"
+msgstr "Aktif ajan yok"
+
+#: package/contents/ui/LiveSection.qml:383
+msgid "Service unavailable"
+msgstr "Servis kapalı"
+
+#: package/contents/ui/LiveSection.qml:499
+msgid "focused"
+msgstr "odaklandı"
+
+#: package/contents/ui/LiveSection.qml:589
+msgid "%1 session"
+msgid_plural "%1 sessions"
+msgstr[0] "%1 oturum"
+
+#: package/contents/ui/main.qml:46
+msgid "Quota Island"
+msgstr "Quota Island"
+
+#: package/contents/ui/main.qml:57
+msgid "%1 (playing)"
+msgstr "%1 (çalıyor)"
+
+#: package/contents/ui/main.qml:59
+msgid "%1 (paused)"
+msgstr "%1 (duraklatıldı)"
+
+#: package/contents/ui/main.qml:60
+msgid "%1 (stopped)"
+msgstr "%1 (durduruldu)"
+
+#: package/contents/ui/main.qml:63
+msgid "Microphone in use: %1"
+msgstr "Mikrofon kullanımda: %1"
+
+#: package/contents/ui/main.qml:66
+#, javascript-format
+msgid "Volume: muted (%1%)"
+msgstr "Ses: sessiz (%%1)"
+
+#: package/contents/ui/main.qml:67
+#, javascript-format
+msgid "Volume: %1%"
+msgstr "Ses: %%1"
+
+#: package/contents/ui/main.qml:72 package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:87
+msgid "%1 5h: %2% · 7d: %3%"
+msgstr "%1 5sa: %%2 · 7g: %%3"
+
+#: package/contents/ui/main.qml:81
+msgid "%1 5h: %2%"
+msgstr "%1 5sa: %%2"
+
+#: package/contents/ui/MediaSection.qml:223
+msgid "Player %1"
+msgstr "Oynatıcı %1"
+
+#: package/contents/ui/MediaSection.qml:272
+msgid "Select player %1"
+msgstr "%1 oynatıcısını seç"
+
+#: package/contents/ui/MediaSection.qml:393
+msgid "Nothing playing"
+msgstr "Çalan yok"
+
+#: package/contents/ui/MediaSection.qml:407
+msgid "Waiting for media"
+msgstr "Medya bekleniyor"
+
+#: package/contents/ui/MediaSection.qml:584
+msgid "Shuffle"
+msgstr "Karıştır"
+
+#: package/contents/ui/MediaSection.qml:726
+msgid "Repeat track"
+msgstr "Parçayı tekrarla"
+
+#: package/contents/ui/MediaSection.qml:726
+msgid "Repeat"
+msgstr "Tekrarla"
+
+#: package/contents/ui/QuotaSection.qml:80
+msgctxt "days and hours until reset"
+msgid "%1d %2h"
+msgstr "%1g %2sa"
+
+#: package/contents/ui/QuotaSection.qml:83
+msgctxt "hours and minutes until reset"
+msgid "%1h %2m"
+msgstr "%1sa %2dk"
+
+#: package/contents/ui/QuotaSection.qml:85
+msgctxt "minutes until reset"
+msgid "%1 min"
+msgstr "%1 dk"
+
+#: package/contents/ui/QuotaSection.qml:291
+msgid "Refresh quotas"
+msgstr "Kotaları yenile"
+
+#: package/contents/ui/QuotaSection.qml:379
+msgid "%1 quota (%2)"
+msgstr "%1 kotası (%2)"
+
+#: package/contents/ui/QuotaSection.qml:379
+msgid "%1 quota"
+msgstr "%1 kotası"
+
+#: package/contents/ui/QuotaSection.qml:419
+msgid "Refresh %1 quota"
+msgstr "%1 kotasını yenile"
+
+#: package/contents/ui/QuotaSection.qml:468
+msgctxt "5-hour quota window"
+msgid "5h"
+msgstr "5sa"
+
+#: package/contents/ui/QuotaSection.qml:475
+msgctxt "7-day quota window"
+msgid "7d"
+msgstr "7g"
+
+#: package/contents/ui/ShelfSection.qml:266
+msgid "Clear all"
+msgstr "Tümünü temizle"
+
+#: package/contents/ui/ShelfSection.qml:318
+msgid "Drop here"
+msgstr "Buraya bırak"
+
+#: package/contents/ui/ShelfSection.qml:364
+msgid "Note or path"
+msgstr "Not veya yol"
+
+#: package/contents/ui/ShelfSection.qml:399
+msgid "Shelf is empty"
+msgstr "Raf boş"
+
+#: package/contents/ui/ShelfSection.qml:533
+msgid "Copy"
+msgstr "Kopyala"
+
+#: package/contents/ui/ShelfSection.qml:574
+msgid "Remove"
+msgstr "Sil"

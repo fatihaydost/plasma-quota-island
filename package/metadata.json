@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Fatih Aydost"
+            }
+        ],
+        "BugReportUrl": "https://github.com/fatihaydost/plasma-quota-island/issues",
+        "Category": "Multimedia",
+        "Description": "Dynamic Island–style panel capsule that follows the system color scheme: clock, calendar, media, audio and AI quota rings",
+        "Description[tr]": "Sistem renk şemasına uyan Dynamic Island tarzı panel kapsülü: saat, takvim, medya, ses ve yapay zekâ kota halkaları",
+        "EnabledByDefault": true,
+        "Icon": "multimedia-player",
+        "Id": "io.github.fatihaydost.island",
+        "License": "GPL-3.0-or-later",
+        "Name": "Quota Island",
+        "Version": "1.0.0",
+        "Website": "https://github.com/fatihaydost/plasma-quota-island"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

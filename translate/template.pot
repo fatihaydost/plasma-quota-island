@@ -1,0 +1,844 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the plasma_applet_io.github.fatihaydost.island package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_io.github.fatihaydost.island\n"
+"Report-Msgid-Bugs-To: https://github.com/fatihaydost/plasma-quota-island/"
+"issues\n"
+"POT-Creation-Date: 2026-11-17 19:47+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: package/contents/config/config.qml:7
+msgid "General"
+msgstr ""
+
+#: package/contents/config/config.qml:12
+msgid "Diagnostics"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:209
+#: package/contents/ui/ConfigDiagnostics.qml:74
+msgid "Audio"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:230
+msgid "Unmute"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:230
+msgid "Mute"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:285
+msgid "Unmute microphone"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:285
+msgid "Mute microphone"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:328
+msgid "Master volume %1 percent"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:480
+msgid "Output %1"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:585
+msgid "Application %1"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:691
+msgid "Unmute %1"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:691
+msgid "Mute %1"
+msgstr ""
+
+#: package/contents/ui/AudioSection.qml:735
+msgid "%1 volume"
+msgstr ""
+
+#: package/contents/ui/Backend.qml:112
+msgid "Login expired"
+msgstr ""
+
+#: package/contents/ui/Backend.qml:112
+msgid "Rate limited"
+msgstr ""
+
+#: package/contents/ui/Backend.qml:113 package/contents/ui/DashClock.qml:50
+msgid "Offline"
+msgstr ""
+
+#: package/contents/ui/Backend.qml:113
+msgid "Unavailable"
+msgstr ""
+
+#: package/contents/ui/Backend.qml:120
+msgid "cached · %1 min ago"
+msgid_plural "cached · %1 min ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/CompactIsland.qml:84
+msgid "Media"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:277
+#: package/contents/ui/CompactIsland.qml:292
+msgid "Muted"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:277
+#: package/contents/ui/CompactIsland.qml:294
+msgid "Volume"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:321
+msgid "1 agent awaiting approval"
+msgid_plural "%1 agents awaiting approval"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/CompactIsland.qml:391
+msgid "Quota Island notification: %1"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:393
+msgid "Quota Island: %1 · %2"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:394
+msgid "Quota Island: %1 %2"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:493
+#: package/contents/ui/ShelfSection.qml:95
+msgid "Added to shelf"
+msgid_plural "%1 items added to shelf"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/CompactIsland.qml:626
+#: package/contents/ui/DashMedia.qml:452
+#: package/contents/ui/MediaSection.qml:619
+msgid "Previous track"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:677
+#: package/contents/ui/DashMedia.qml:204 package/contents/ui/DashMedia.qml:491
+#: package/contents/ui/MediaSection.qml:375
+#: package/contents/ui/MediaSection.qml:655
+msgid "Pause"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:677
+#: package/contents/ui/DashMedia.qml:204 package/contents/ui/DashMedia.qml:491
+#: package/contents/ui/MediaSection.qml:375
+#: package/contents/ui/MediaSection.qml:655
+msgid "Play"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:728
+#: package/contents/ui/DashMedia.qml:528
+#: package/contents/ui/MediaSection.qml:691
+msgid "Next track"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:825
+msgid "Microphone in use by %1"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:854
+#: package/contents/ui/CompactIsland.qml:887
+#: package/contents/ui/CompactIsland.qml:920
+msgid "%1 quota: %2"
+msgstr ""
+
+#: package/contents/ui/CompactIsland.qml:1064
+msgid "Drop on shelf"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:53
+msgid "%1: found"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:53
+msgid "%1: not found"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:63
+msgid "Checking…"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:63
+msgid "Found"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:63
+msgid "Not found"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:81
+msgid "System"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:90
+msgid "Optional integrations"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:94
+msgid "Houra database"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:98
+msgid "Quota credentials"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:106
+msgid "Check again"
+msgstr ""
+
+#: package/contents/ui/ConfigDiagnostics.qml:114
+msgid ""
+"Only presence is checked. No paths, tokens or credential contents are read "
+"into this page."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:84
+msgid "Color theme:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:85
+msgid "System color scheme (KDE)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:104
+msgid "Custom accent color:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:109
+msgid "#rrggbb (empty = theme accent)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:129
+msgid "Reset"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:143
+msgid "Max. track title width (px):"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:151
+msgid "Wheel volume step (%):"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:159
+msgid "Panel badges:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:160
+msgid "Show volume percentage badge"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:165
+msgid "Show quota rings"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:170
+msgid "Quota providers:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:185
+msgid "A provider without credentials is hidden even when enabled."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:198
+msgid "Idle quota badge:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:199
+msgid "Hourly and weekly together (5h·7d)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:210
+msgid "Hourly window only (5h)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:221
+msgid "Weekly window only (7d)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:236
+msgid "Optional integrations:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:237
+msgid "Herdr agents (if hc is installed)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:242
+msgid "Houra focus summary (if the database exists)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:251
+msgid "Weather:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:252
+msgid "Off (no network requests)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:262
+msgid "Manual location (Open-Meteo)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:272
+msgid "Locate me by IP address (your IP is sent to ipwho.is)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:282
+msgid "City:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:284
+msgid "e.g. Berlin"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:289
+msgid "Coordinates (optional):"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:295
+msgid "latitude"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:302
+msgid "longitude"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:310
+msgid ""
+"Tip: on the panel capsule, the mouse wheel changes the volume, middle click "
+"toggles mute, and left click opens the full Quota Island window."
+msgstr ""
+
+#: package/contents/ui/DashCalendar.qml:134
+msgid "Previous month"
+msgstr ""
+
+#: package/contents/ui/DashCalendar.qml:228
+msgid "Next month"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:41
+msgctxt "weather"
+msgid "Clear"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:42
+msgctxt "weather"
+msgid "Partly cloudy"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:43
+msgctxt "weather"
+msgid "Cloudy"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:44
+msgctxt "weather"
+msgid "Foggy"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:45
+msgctxt "weather"
+msgid "Drizzle"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:46
+msgctxt "weather"
+msgid "Rainy"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:47
+msgctxt "weather"
+msgid "Snowy"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:48
+msgctxt "weather"
+msgid "Stormy"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:49
+msgid "Loading…"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:51
+msgid "Location not set"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:61
+msgid "Today"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:177
+msgid "Weather"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:190
+#, javascript-format
+msgid "%1% humidity"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:191
+msgid "Click to refresh"
+msgstr ""
+
+#: package/contents/ui/DashClock.qml:204
+msgid "Refresh weather"
+msgstr ""
+
+#: package/contents/ui/DashMedia.qml:237
+#: package/contents/ui/MediaSection.qml:166
+msgid "NOW PLAYING"
+msgstr ""
+
+#: package/contents/ui/DashMedia.qml:238
+#: package/contents/ui/MediaSection.qml:167
+msgid "PAUSED"
+msgstr ""
+
+#: package/contents/ui/DashMedia.qml:238
+#: package/contents/ui/MediaSection.qml:167
+msgid "STANDBY"
+msgstr ""
+
+#: package/contents/ui/DashMedia.qml:268
+#: package/contents/ui/MediaSection.qml:392
+msgid "Unknown track"
+msgstr ""
+
+#: package/contents/ui/DashMedia.qml:269
+msgid "No media playing"
+msgstr ""
+
+#: package/contents/ui/DashMedia.qml:358
+#: package/contents/ui/MediaSection.qml:488
+msgid "Seek"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:27
+msgid "Wired"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:262 package/contents/ui/main.qml:69
+#: package/contents/ui/main.qml:75 package/contents/ui/main.qml:84
+msgid "%1: %2"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:291
+msgid "Wired network"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:291
+msgid "Wi-Fi"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:293
+#, javascript-format
+msgid "%1% + LAN"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:293
+#, javascript-format
+msgid "%1% connected"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:294
+msgid "On"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:294
+#: package/contents/ui/DashResources.qml:325
+msgid "Off"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:308
+msgid "Bluetooth"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:310
+#, javascript-format
+msgid "%1% battery"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:310
+msgid "Connected"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:311
+msgid "Ready"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:324
+msgid "Keep Awake"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:325
+msgid "On · Sleep blocked"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:338
+msgid "Do Not Disturb"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:339
+msgid "On · Silenced"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:339
+msgid "Notifications on"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:397
+msgid "%1 approval"
+msgid_plural "%1 approvals"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/DashResources.qml:398
+msgid "%1 agent"
+msgid_plural "%1 agents"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/DashResources.qml:459
+msgid "Open Live tab"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:459
+msgid "%1 · %2"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:479
+msgctxt "@action:button suspend"
+msgid "Sleep"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:480
+msgctxt "@action:button"
+msgid "Lock"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:481
+msgctxt "@action:button log out"
+msgid "Log Out"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:482
+msgctxt "@action:button reboot"
+msgid "Restart"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:483
+msgctxt "@action:button power off"
+msgid "Shut Down"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:550
+msgid "Confirm?"
+msgstr ""
+
+#: package/contents/ui/DashResources.qml:564
+msgid "Confirm %1"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Overview"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Media & Audio"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Quotas"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Live"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:61
+msgctxt "@title:tab"
+msgid "Shelf"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:94
+#: package/contents/ui/LiveSection.qml:724
+msgid "Performance"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:97
+#: package/contents/ui/LiveSection.qml:726
+msgid "Power Saver"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:99
+#: package/contents/ui/LiveSection.qml:725
+#: package/contents/ui/LiveSection.qml:743
+msgid "Balanced"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:486
+msgid "SYSTEM LOAD"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:600
+msgctxt "short for performance power profile"
+msgid "Perf"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:601
+msgctxt "short for balanced power profile"
+msgid "Bal"
+msgstr ""
+
+#: package/contents/ui/FullIsland.qml:602
+msgctxt "short for power saver profile"
+msgid "Eco"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:167
+msgctxt "hours and minutes"
+msgid "%1h %2m"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:167
+msgctxt "hours"
+msgid "%1 h"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:169
+msgctxt "minutes"
+msgid "%1 min"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:174
+msgctxt "agent status"
+msgid "blocked"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:177
+msgctxt "agent status"
+msgid "working"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:179
+msgctxt "agent status"
+msgid "done"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:207
+msgid "On AC power"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:210
+msgid "Charging"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:213
+msgid "Plugged in"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:216
+msgid "Battery low"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:218
+msgid "On battery"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:295
+msgid "No live integrations found"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:336
+msgctxt "agent count label"
+msgid "working"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:361
+msgctxt "agent count label"
+msgid "blocked"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:382
+msgid "No active agents"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:383
+msgid "Service unavailable"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:499
+msgid "focused"
+msgstr ""
+
+#: package/contents/ui/LiveSection.qml:589
+msgid "%1 session"
+msgid_plural "%1 sessions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:46
+msgid "Quota Island"
+msgstr ""
+
+#: package/contents/ui/main.qml:57
+msgid "%1 (playing)"
+msgstr ""
+
+#: package/contents/ui/main.qml:59
+msgid "%1 (paused)"
+msgstr ""
+
+#: package/contents/ui/main.qml:60
+msgid "%1 (stopped)"
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+msgid "Microphone in use: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:66
+#, javascript-format
+msgid "Volume: muted (%1%)"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, javascript-format
+msgid "Volume: %1%"
+msgstr ""
+
+#: package/contents/ui/main.qml:72 package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:87
+msgid "%1 5h: %2% · 7d: %3%"
+msgstr ""
+
+#: package/contents/ui/main.qml:81
+msgid "%1 5h: %2%"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:223
+msgid "Player %1"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:272
+msgid "Select player %1"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:393
+msgid "Nothing playing"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:407
+msgid "Waiting for media"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:584
+msgid "Shuffle"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:726
+msgid "Repeat track"
+msgstr ""
+
+#: package/contents/ui/MediaSection.qml:726
+msgid "Repeat"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:80
+msgctxt "days and hours until reset"
+msgid "%1d %2h"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:83
+msgctxt "hours and minutes until reset"
+msgid "%1h %2m"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:85
+msgctxt "minutes until reset"
+msgid "%1 min"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:291
+msgid "Refresh quotas"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:379
+msgid "%1 quota (%2)"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:379
+msgid "%1 quota"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:419
+msgid "Refresh %1 quota"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:468
+msgctxt "5-hour quota window"
+msgid "5h"
+msgstr ""
+
+#: package/contents/ui/QuotaSection.qml:475
+msgctxt "7-day quota window"
+msgid "7d"
+msgstr ""
+
+#: package/contents/ui/ShelfSection.qml:266
+msgid "Clear all"
+msgstr ""
+
+#: package/contents/ui/ShelfSection.qml:318
+msgid "Drop here"
+msgstr ""
+
+#: package/contents/ui/ShelfSection.qml:364
+msgid "Note or path"
+msgstr ""
+
+#: package/contents/ui/ShelfSection.qml:399
+msgid "Shelf is empty"
+msgstr ""
+
+#: package/contents/ui/ShelfSection.qml:533
+msgid "Copy"
+msgstr ""
+
+#: package/contents/ui/ShelfSection.qml:574
+msgid "Remove"
+msgstr ""

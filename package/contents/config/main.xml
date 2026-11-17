@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="" />
+  <group name="General">
+    <!-- kde (sistem renk şeması) | gruvbox -->
+    <entry name="theme" type="String">
+      <default>kde</default>
+    </entry>
+    <!-- Boşsa temanın kendi vurgu rengi kullanılır; aksi halde #rrggbb -->
+    <entry name="accentColor" type="String">
+      <default></default>
+    </entry>
+    <!-- Panel kapsülünde şarkı adı maksimum genişliği (px) -->
+    <entry name="maxTrackWidth" type="Int">
+      <default>160</default>
+      <min>80</min>
+      <max>360</max>
+    </entry>
+    <!-- Panel tekerleği ile ses değişim adımı (%) -->
+    <entry name="volumeStep" type="Int">
+      <default>5</default>
+      <min>1</min>
+      <max>20</max>
+    </entry>
+    <!-- Panelde ses rozetini göster -->
+    <entry name="showVolumeBadge" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- Panelde kota halkalarını göster (yalnız açık ve kimliği bulunan sağlayıcılar) -->
+    <entry name="showQuotaBadges" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- Kota sağlayıcıları: açıksa ve kimlik bilgisi bulunursa görünür; kapalıysa hiç sorgulanmaz -->
+    <entry name="quotaClaudeEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="quotaAgyEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="quotaCodexEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- both | 5h | 7d -->
+    <entry name="quotaWindowMode" type="String">
+      <default>both</default>
+    </entry>
+    <!-- İsteğe bağlı entegrasyonlar: araç/DB yoksa zaten gizlenir; burada elle de kapatılabilir -->
+    <entry name="herdrEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="houraEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- Hava durumu: off | manual (şehir veya koordinat) | ip (ipwho.is ile IP konumu, açık onay) -->
+    <entry name="weatherMode" type="String">
+      <default>off</default>
+    </entry>
+    <entry name="weatherCity" type="String">
+      <default></default>
+    </entry>
+    <!-- Boşsa şehir adı Open-Meteo ile koordinata çevrilir -->
+    <entry name="weatherLatitude" type="String">
+      <default></default>
+    </entry>
+    <entry name="weatherLongitude" type="String">
+      <default></default>
+    </entry>
+  </group>
+</kcfg>
