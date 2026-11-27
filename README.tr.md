@@ -67,6 +67,18 @@ Her sağlayıcıyı widget ayarlarından ayrı ayrı açıp kapatabilirsiniz. Bi
 
 Token'lar diske, günlüklere ya da önbelleğe hiç yazılmaz. Sonuçlar 90 saniye boyunca `~/.cache/plasma-quota-island/quotas_cache.json` dosyasında (izin `0600`) tutulur. Bir uç geçici olarak erişilemezse son canlı sonuç en fazla 30 dakika gösterilir; soluk çizilir ve yanında `önbellek · N dk önce` notu çıkar. Daha eski veri ya da penceresi sıfırlanmış veri gösterilmez.
 
+**AGY'nin Gemini sınırları için AGY status line gerekir.** Gemini grubunun 5 saatlik ve haftalık sınırları yukarıdaki uç noktalarda yok; Antigravity bunları yalnızca kendi status line'ına verir. Görmek için `~/.gemini/antigravity-cli/settings.json` dosyasına şunu ekleyin (dosyada başka anahtarlar varsa birleştirin; zaten bir status line kullanıyorsanız yalnız biri kalabilir):
+
+```json
+"statusLine": {
+  "type": "command",
+  "command": "python3 ~/.local/share/plasma/plasmoids/io.github.fatihaydost.island/contents/scripts/island_ctl.py agy-statusline",
+  "stack_with_default": true
+}
+```
+
+Bu komut ekrana bir şey yazmaz, Antigravity'nin kendi status line'ı olduğu gibi kalır. Her yanıtta yalnız kota kovalarını (token ya da istem değil) `~/.cache/plasma-quota-island/agy_statusline.json` dosyasına (`0600`) kaydeder. Widget Gemini havuzunu, Claude & GPT havuzunu ve daha çok kullanılan grubun haftasını buradan gösterir; Antigravity token'ının süresi dolmuşken de göstermeye devam eder. Değerler yalnız bir Antigravity oturumu çalışırken güncellenir; o arada sıfırlanmış pencere kullanılmamış sayılır, 24 saatten eski kayıt yok sayılır.
+
 Codex uç noktası ve yanıt biçimi açık kaynak [openai/codex](https://github.com/openai/codex) istemcisinden alındı. Henüz gerçek bir hesapla denenmedi.
 
 ## Gizlilik ve ağ
