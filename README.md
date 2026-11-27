@@ -67,6 +67,18 @@ Each provider can be turned on or off in the widget settings. A provider is show
 
 Tokens are never written to disk, logs or the cache. Results are cached for 90 seconds in `~/.cache/plasma-quota-island/quotas_cache.json` (mode `0600`). If an endpoint is temporarily unreachable, the last live result is shown for up to 30 minutes, drawn faded and labelled `cached · N min ago`. Older data, or data whose window has already reset, is not shown.
 
+**AGY's Gemini limits need the AGY status line.** The Gemini group's 5-hour and weekly limits are not in the endpoints above; Antigravity hands them only to its status line. To show them, add this to `~/.gemini/antigravity-cli/settings.json` (merge it if the file has other keys; if you already use a status line, keep only one):
+
+```json
+"statusLine": {
+  "type": "command",
+  "command": "python3 ~/.local/share/plasma/plasmoids/io.github.fatihaydost.island/contents/scripts/island_ctl.py agy-statusline",
+  "stack_with_default": true
+}
+```
+
+It prints nothing, so Antigravity's own status line stays as it is. On every turn it saves the quota buckets (no tokens, no prompts) to `~/.cache/plasma-quota-island/agy_statusline.json` (mode `0600`). The widget then shows the Gemini pool, the Claude & GPT pool and the more used group's week from it, and keeps showing them while the Antigravity token has expired. The values update only while an Antigravity session runs; a window that has since reset counts as unused, and a report older than 24 hours is ignored.
+
 The Codex endpoint and response format were taken from the open-source [openai/codex](https://github.com/openai/codex) client. They have not yet been checked against a live account.
 
 ## Privacy and network

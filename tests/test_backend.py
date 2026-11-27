@@ -435,6 +435,61 @@ class TestIslandBackend(unittest.TestCase):
                 self.assertEqual(fb["fableWeekly"]["usedPct"], 70)
                 self.assertNotIn(ephemeral_secret, json.dumps(fb))
 
+    def test_agy_statusline_record_merge_and_overlay(self) -> None:
+        ref = datetime(2026, 11, 27, 11, 0, 0, tzinfo=timezone.utc)
+        turn = {"quota": {
+            "gemini-5h": {"remaining_fraction": 1, "reset_time": "2026-11-27T15:42:48Z"},
+            "gemini-weekly": {"remaining_fraction": 0.612, "reset_time": "2026-12-03T07:02:26Z"},
+            "3p-5h": {"remaining_fraction": 0.8, "reset_time": "2026-11-27T16:00:00Z"},
+            "3p-weekly": {"remaining_fraction": 0.9, "reset_time": "2026-12-04T11:00:00Z"},
+        }, "plan_tier": "Google AI Ultra", "model": {"display_name": "Gemini 4 Neon"}}
+        with tempfile.TemporaryDirectory() as tmpdir, mock.patch.dict(
+            os.environ, {"PLASMA_QUOTA_ISLAND_CACHE_DIR": tmpdir}
+        ):
+            ctl.record_agy_statusline(json.dumps(turn))
+            # An older session reporting less use in the same window does not overwrite.
+            older = {"quota": {"gemini-weekly": {"remaining_fraction": 0.95, "reset_time": "2026-12-03T07:02:26Z"}}}
+            ctl.record_agy_statusline(json.dumps(older))
+            ctl.record_agy_statusline("not json")
+            saved = ctl._read_agy_statusline()
+            self.assertEqual(saved["quota"]["gemini-weekly"]["remaining_fraction"], 0.612)
+            self.assertEqual(set(saved["quota"]), set(ctl.AGY_STATUSLINE_KEYS))
+            self.assertNotIn("plan_tier", json.dumps(saved))  # only the buckets are kept
+
+            # API unavailable (token expired): the status line makes AGY available.
+            down = ctl._with_reason(ctl._unavailable_agy_quota(), "auth_expired", 401)
+            q = ctl.apply_agy_statusline(down, dict(saved, at=int(ref.timestamp())), ref)
+            self.assertTrue(q["available"])
+            self.assertEqual(q["source"], "statusline")
+            self.assertNotIn("reason", q)
+            self.assertEqual(q["geminiPool"]["usedPct"], 0)
+            self.assertEqual(q["claudePool"]["usedPct"], 20)
+            self.assertEqual(q["weekly"]["usedPct"], 39)  # the more used group's week
+            self.assertEqual(q["weekly"]["resetsAt"], "2026-12-03T07:02:26Z")
+
+            # A window that has reset since the last report counts as unused.
+            later = datetime(2026, 11, 27, 16, 30, 0, tzinfo=timezone.utc)
+            q2 = ctl.apply_agy_statusline(down, dict(saved, at=int(ref.timestamp())), later)
+            self.assertEqual(q2["claudePool"]["usedPct"], 0)
+            self.assertEqual(q2["claudePool"]["resetsAt"], "")
+
+            # Too old a report is ignored; a live API result keeps its source.
+            stale = dict(saved, at=int(ref.timestamp()) - ctl.AGY_STATUSLINE_MAX_AGE_SEC - 1)
+            self.assertFalse(ctl.apply_agy_statusline(down, stale, ref)["available"])
+            live = {**ctl._unavailable_agy_quota(), "available": True, "source": "live"}
+            self.assertEqual(ctl.apply_agy_statusline(live, dict(saved, at=int(ref.timestamp())), ref)["source"], "live")
+        self.assertIsNone(ctl.merge_agy_statusline({"quota": {}}, {}))
+
+    def test_agy_statusline_command_prints_nothing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            env = {**os.environ, "PLASMA_QUOTA_ISLAND_CACHE_DIR": tmpdir}
+            payload = json.dumps({"quota": {"gemini-5h": {"remaining_fraction": 0.5, "reset_time": "2026-11-27T15:00:00Z"}}})
+            res = subprocess.run(["python3", str(SCRIPT_PATH), "agy-statusline"], input=payload,
+                                 capture_output=True, text=True, env=env, timeout=10)
+            self.assertEqual(res.returncode, 0)
+            self.assertEqual(res.stdout, "")  # agy shows whatever the status line prints
+            self.assertEqual(oct(os.stat(Path(tmpdir) / ctl.AGY_STATUSLINE_FILE).st_mode & 0o777), "0o600")
+
     def test_agy_models_parser_and_quotas_ttl(self) -> None:
         ref = datetime(2026, 11, 14, 20, 30, 0, tzinfo=timezone.utc)
         sample_5h = {

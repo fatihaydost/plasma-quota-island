@@ -37,6 +37,12 @@ QUOTA_USER_AGENT = "plasma-quota-island/1.0"
 QUOTA_CACHE_TTL_SEC = 90
 # Yedek/önbellek kota verisi en fazla bu kadar eski olabilir; daha eskisi gösterilmez.
 QUOTA_STALE_MAX_SEC = 30 * 60
+# agy's status line (settings.json "statusLine" -> `island_ctl.py agy-statusline`) receives the
+# per-group quota buckets on every turn. The Gemini group is not in the cloudcode-pa endpoints, so
+# this is the only source for it. Values are account state, valid until their window resets.
+AGY_STATUSLINE_FILE = "agy_statusline.json"
+AGY_STATUSLINE_KEYS = ("gemini-5h", "gemini-weekly", "3p-5h", "3p-weekly")
+AGY_STATUSLINE_MAX_AGE_SEC = 24 * 3600
 ALLOWED_ART_SCHEMES = ("file://", "https://")
 _DBUS_OBJ_PATH_RE = re.compile(r"^/(?:[A-Za-z0-9_]+(?:/[A-Za-z0-9_]+)*)?$")
 _BUS_NAME_RE = re.compile(r"^org\.mpris\.MediaPlayer2\.[A-Za-z0-9_.-]{1,180}$")
@@ -1318,7 +1324,102 @@ def _post_agy_endpoint(url: str, token: str) -> dict[str, Any] | None:
     return body if isinstance(body, dict) else None
 
 
+def _newest_bucket(new: dict[str, Any], old: Any) -> dict[str, Any]:
+    """Several agy sessions write; keep the later window, and in the same window the most used."""
+    if not isinstance(old, dict):
+        return new
+    new_reset, old_reset = str(new.get("reset_time") or ""), str(old.get("reset_time") or "")
+    if new_reset != old_reset:
+        return new if new_reset > old_reset else old
+    return new if float(new.get("remaining_fraction", 1)) <= float(old.get("remaining_fraction", 1)) else old
+
+
+def merge_agy_statusline(payload: Any, saved: Any, now_epoch: int | None = None) -> dict[str, Any] | None:
+    quota = payload.get("quota") if isinstance(payload, dict) else None
+    if not isinstance(quota, dict) or not any(isinstance(quota.get(k), dict) for k in AGY_STATUSLINE_KEYS):
+        return None
+    old = saved.get("quota") if isinstance(saved, dict) and isinstance(saved.get("quota"), dict) else {}
+    merged = dict(old)
+    for key in AGY_STATUSLINE_KEYS:
+        b = quota.get(key)
+        if isinstance(b, dict):
+            fresh = {"remaining_fraction": b.get("remaining_fraction", 1), "reset_time": b.get("reset_time") or ""}
+            merged[key] = _newest_bucket(fresh, old.get(key))
+    return {"at": int(time.time()) if now_epoch is None else now_epoch, "quota": merged}
+
+
+def record_agy_statusline(raw: str) -> None:
+    """agy status line entry point: stores the quota buckets, prints nothing (agy's own line stays)."""
+    try:
+        payload = json.loads(raw or "{}")
+    except ValueError:
+        return
+    target = get_cache_dir() / AGY_STATUSLINE_FILE
+    try:
+        saved = json.loads(target.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        saved = {}
+    merged = merge_agy_statusline(payload, saved)
+    if merged is not None:
+        _atomic_write_text(target, json.dumps(merged))
+
+
+def _read_agy_statusline() -> dict[str, Any] | None:
+    try:
+        data = json.loads((get_cache_dir() / AGY_STATUSLINE_FILE).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return data if isinstance(data, dict) and isinstance(data.get("quota"), dict) else None
+
+
+def _statusline_window(bucket: Any, label: str, ref: datetime) -> dict[str, Any] | None:
+    if not isinstance(bucket, dict):
+        return None
+    reset_dt = parse_iso_utc(bucket.get("reset_time"))
+    if reset_dt is not None and reset_dt <= ref:
+        # The window has reset since agy last reported: nothing used in the new one yet.
+        return {"label": label, "usedPct": 0, "remainingPct": 100, "resetsAt": "", "resetInHuman": "—"}
+    try:
+        rem = max(0.0, min(1.0, float(bucket.get("remaining_fraction", 1))))
+    except (TypeError, ValueError):
+        return None
+    used = clamp_int((1.0 - rem) * 100.0, 0, 100)
+    raw_reset = bucket.get("reset_time") or ""
+    return {"label": label, "usedPct": used, "remainingPct": 100 - used,
+            "resetsAt": normalize_iso_utc(raw_reset), "resetInHuman": format_reset_in(raw_reset, now_utc=ref)}
+
+
+def apply_agy_statusline(q: dict[str, Any], sl: dict[str, Any] | None, now_utc: datetime | None = None) -> dict[str, Any]:
+    """Overlays agy's status line buckets: Gemini and Claude/GPT 5-hour pools, weekly = the more used group."""
+    ref = now_utc.astimezone(timezone.utc) if now_utc is not None else datetime.now(timezone.utc)
+    if not sl or not (0 <= ref.timestamp() - int(sl.get("at") or 0) <= AGY_STATUSLINE_MAX_AGE_SEC):
+        return q
+    quota = sl["quota"]
+    gemini = _statusline_window(quota.get("gemini-5h"), "Gemini (AGY)", ref)
+    claude = _statusline_window(quota.get("3p-5h"), "Claude & GPT (AGY)", ref)
+    weeklies = [w for w in (_statusline_window(quota.get(k), "Weekly (7d)", ref) for k in ("gemini-weekly", "3p-weekly")) if w]
+    if not (gemini or claude or weeklies):
+        return q
+    out = dict(q)
+    if gemini:
+        out["geminiPool"] = gemini
+    if claude:
+        out["claudePool"] = claude
+    if weeklies:
+        out["weekly"] = max(weeklies, key=lambda w: w["usedPct"])
+    if not out.get("available"):
+        # API down or token expired (agy refreshes it only while running): the status line still holds.
+        out.update({"available": True, "configured": True, "source": "statusline", "dataAt": int(ref.timestamp())})
+        out.pop("reason", None)
+        out.pop("httpStatus", None)
+    return out
+
+
 def fetch_agy_quota(now_utc: datetime | None = None) -> dict[str, Any]:
+    return apply_agy_statusline(_fetch_agy_quota_api(now_utc), _read_agy_statusline(), now_utc)
+
+
+def _fetch_agy_quota_api(now_utc: datetime | None = None) -> dict[str, Any]:
     token = _lookup_agy_access_token()
     if not token:
         return _with_reason(_unavailable_agy_quota(configured=False), "no_credentials")
@@ -1576,6 +1677,10 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if cmd == "status":
             print(json.dumps(get_full_status(), ensure_ascii=False))
+            return 0
+
+        if cmd == "agy-statusline":
+            record_agy_statusline(sys.stdin.read())
             return 0
 
         if cmd == "quotas":
